@@ -9,11 +9,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    background-color: var(--background-color);
-}
-
-nav {
-    background-color: var(--primary-color);
-}
