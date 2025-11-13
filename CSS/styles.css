@@ -23,8 +23,6 @@ body {
     margin: 0;
 }
 
-/* NAV */
-
 .logo {
     font-weight: bold;
     color: white;
@@ -43,20 +41,69 @@ body {
 
 @keyframes crecerTexto {
   from {
-    font-size: 40px;
+    font-size: 64px;
+  }
+  to {
+    font-size: 82px;
+  }
+}
+
+@keyframes achicarTexto {
+  from {
+    font-size: 82px;
   }
   to {
     font-size: 64px;
   }
 }
 
-@keyframes achicarTexto {
-  from {
-    font-size: 64px;
-  }
-  to {
-    font-size: 40px;
-  }
+.gif {
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+
+.boton{
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 18px;
+    color: white;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px white, 0 0 40px white;
+}
+
+.boton:hover {
+    background: white;
+    color: black;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 /* ESTRELLAS */
@@ -105,4 +152,22 @@ body {
 @keyframes twinkle {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
+}
+
+/* Prueba de animacion */
+
+.interior-cont {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    color: white;
+    text-align: center;
+}
+
+.zoom-container {
+    transition: transform 2s ease-in-out;
+}
+
+.zoom-in {
+    transform: scale(5) translateY(-20%);
 }
